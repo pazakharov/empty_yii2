@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
@@ -27,7 +28,7 @@ class HelloController extends Controller
      */
     public function actionIndex($message = 'hello world')
     {
-        echo $message . "\n";
+        \Yii::$app->db->createCommand('SHOW TABLES')->execute();
 
         return ExitCode::OK;
     }
